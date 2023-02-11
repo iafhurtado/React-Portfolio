@@ -1,59 +1,57 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    box-sizing: border-box;
+    list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 :root {
-    --primary-hue:270%;
+    --primary-hue: 270;
     --black-lightness: 15%;
-    --dark-lightness: 30%;
-    --light-lightness: 70%;
+    --dark-lightness: 44%;
+    --light-lightness: 94%;
     --white-lightness: 100%;
-    --color-primary: hsl(var(--primary-hue), 100%, var(--light-lightness));
-    --color-white : hsl(0, 0%, var(--white-lightness));
-    --color-light : hsl(0, 0%, var(--light-lightness));
-    --color-black : hsl(0, 0%, var(--black-lightness));
-    --color-dark : hsl(0, 0%, var(--dark-lightness));
+    --color-primary: hsl(var(--primary-hue), 89%, 41%);
+    --color-white: hsl(0, 5%, var(--white-lightness));
+    --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+    --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+    --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 
+    /* GENERAL CONTAINER VARIABLES */
     --container-width-lg: 76%;
     --container-width-md: 90%;
 
-    --border-radius-1: 0.5rem;
-    --border-radius-2: 1rem;
-    --border-radius-3: 2rem;
+    /* BORDER RADIUS VARIABLES */
+    --border-radius-1: 1.2rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 0.5rem;
 
+    /* GENERAL TRANSITION VARIABLE */
     --transition: all 500ms ease;
-
 }
 
 html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--color-white);
-    color: var(--color-dark);
-    font-size: 0.9rem;
-    line-height: 1.6;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
-/*General Classes*/
 
+/* GENERAL CONTAINER CLASS */
 .container {
     width: var(--container-width-lg);
     margin-inline: auto;
     max-width: 1920px;
 }
 
-/*General section styling*/
-
+/* GENERAL SECTION STYLES */
 section {
     padding: 10rem 0;
     background: var(--color-light);
@@ -74,20 +72,21 @@ section > p {
     width: 40%;
 }
 
-/*GENERAL SECTION STYLING*/
+
+/* GENERAL SECTION STYLES */
 a {
     color: var(--color-white);
     transition: var(--transition);
 }
 
-/*GENERAL HEADING STYLING*/
+/* GENERAL HEADING STYLES */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     color: var(--color-black);
 }
 
 h1 {
-    font-size: 3.0rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -110,16 +109,14 @@ h6 {
     font-size: 0.8rem;
 }
 
-/*GENERAL IMAGE STYLING*/
+/* GENERAL IMAGES STYLES */
 img {
-    width: 100%;
-    height: auto;
     display: block;
-    object-fit: cover
+    width: 100%;
+    object-fit: cover;
 }
 
-
-/*GENERAL BUTTON STYLING*/
+/* GENERAL BUTTON STYLES */
 .btn {
     display: inline-block;
     width: fit-content;
@@ -135,7 +132,7 @@ img {
 }
 
 .btn:hover {
-    background: transparent;
+    background-color: transparent;
     border-color: var(--color-light);
     transform: translateY(-0.5rem);
 }
@@ -144,14 +141,14 @@ img {
     background: var(--color-white);
 }
 
-.btn.white.hover {
+.btn.white:hover {
     background: transparent;
     border-color: var(--color-white);
 }
 
 .btn.primary {
     background: var(--color-primary);
-    /*text color always white for primary button*/
+    /* text color always white that's why i didn't use a variable color */
     color: white;
 }
 
@@ -161,6 +158,64 @@ img {
     color: var(--color-primary);
 }
 
--btn.sm {
+.btn.sm {
     padding: 0.5rem 1.2rem;
+}
+
+
+
+
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        padding: 8rem 0;
+    }
+
+    section > p {
+        width: 72%;
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+
+    section > p {
+        width: var(--container-width-md);
+    }
 }

@@ -1,17 +1,24 @@
-import './navbar.css';
+import Logo from '../../assets/logo.jpg'
+import data from './data'
+import {IoIosColorPalette} from 'react-icons/io'
+import './navbar.css'
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-      <nav id="navbar">
-        <ul>
-          <li><a href="#header">Header</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#faqs">FAQs</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#footer">Footer</a></li>
+    <nav>
+      <div className="container nav__container">
+        <a href="index.html" className='nav__logo'>
+          <img src={Logo} alt="Logo" />
+        </a>
+        <ul className='nav__menu'>
+          {
+            data.map(item => <li key={item.id}><a href={item.link}>{item.title}</a></li>)
+          }
         </ul>
-      </nav>
-  );
+        <button id='theme__icon'><IoIosColorPalette/></button>
+      </div>
+    </nav>
+  )
 }
 
-export default NavBar;
+export default Navbar
