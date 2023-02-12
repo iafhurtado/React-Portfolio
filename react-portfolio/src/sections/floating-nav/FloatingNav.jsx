@@ -1,3 +1,5 @@
+
+/*
 import './floatingnav.css';
 
 const FloatingNav = () => {
@@ -12,4 +14,4 @@ const FloatingNav = () => {
   );
 }
 
-export default FloatingNav;
+export default FloatingNav;*/

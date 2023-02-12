@@ -7,7 +7,7 @@ import Portfolio from './sections/portfolio/Portfolio';
 import FAQs from './sections/faqs/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
-import FloatingNav from './sections/floating-nav/FloatingNav';
+/*import FloatingNav from './sections/floating-nav/FloatingNav';*/
 import './App.css';
 
 const App = () => {
@@ -21,7 +21,6 @@ const App = () => {
       <FAQs />
       <Contact />
       <Footer />
-      <FloatingNav />
     </main>
   );
 }
