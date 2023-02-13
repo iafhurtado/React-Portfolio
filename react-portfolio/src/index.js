@@ -1,8 +1,15 @@
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-
+import { ModalProvider } from './context/modal-context';
+import { ThemeProvider } from './context/theme-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <ThemeProvider>
+    <ModalProvider>
+        <App />
+    </ModalProvider>
+    </ThemeProvider>
+    );
 
