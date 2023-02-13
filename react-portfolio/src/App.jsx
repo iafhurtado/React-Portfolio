@@ -8,7 +8,7 @@ import Testimonials from './sections/testimonials/Testimonials';
 import FAQs from './sections/faqs/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
-/*import FloatingNav from './sections/floating-nav/FloatingNav';*/
+import FloatingNav from './sections/floating-nav/FloatingNav';
 import Theme from './theme/Theme';
 import { useThemeContext } from './context/theme-context';
 import './App.css';
@@ -28,7 +28,7 @@ const App = () => {
         <Contact/>
         <Footer/>
         <Theme/>
-        {/* <FloatingNav/> */}
+        <FloatingNav/>
     </main>
   )
 }
